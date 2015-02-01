@@ -137,4 +137,6 @@ micro: all
 cub: OPT_DEFS += -DKEYMAP_CUB
 cub: all
 
+norman: OPT_DEFS += -DKEYMAP_NORMAN
+norman: all
 
