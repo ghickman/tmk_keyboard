@@ -127,7 +127,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 static const uint16_t PROGMEM fn_actions[] = {
-    ACTION_LAYER_MOMENTARY(3),  // Hold for function/media Layer
+    ACTION_LAYER_MOMENTARY(1),  // Hold for function/media Layer
     /* ACTION_LAYER_INVERT(2, ON_PRESS), // Push to enable/disable Numpad Layer */
     /* ACTION_LAYER_INVERT(1, ON_PRESS), // Push to enable/disable QWERTY Layer */
 };
