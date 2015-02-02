@@ -10,7 +10,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|  =   |           |   -  |------+------+------+------+------+--------|
      * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   P  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |   `  |      | LAlt | LGui |                                       | RGui | Left |  Up  | Down | Right|
+     *   |      |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        |  F6  |  F5  |       |  F8  |  F7  |
@@ -35,7 +35,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           QUOT, J,   U,    R,    L,    SCLN, RBRC,
                 Y,   N,    I,    O,    H,    RCTL,
           MINS, P,   M,    COMM, DOT,  SLSH, RSFT,
-                     RGUI, LEFT, UP,   DOWN, RIGHT,
+                     LGUI, LEFT, UP,   DOWN, RIGHT,
         F8,   F7,
         END,
         F13,  BSPC, SPC
