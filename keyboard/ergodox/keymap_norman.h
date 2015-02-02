@@ -10,7 +10,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|  =   |           |   -  |------+------+------+------+------+--------|
      * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   P  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |  L0  |   `  |  +L2 | LAlt | LGui |                                       | RGui | Left |  Up  | Down | Right|
+     *   |      |   `  |      | LAlt | LGui |                                       | RGui | Left |  Up  | Down | Right|
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        |  F6  |  F5  |       |  F8  |  F7  |
@@ -49,7 +49,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * | TRNS   |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * | TRNS   |      | VolU | Mute | VolD |      |------|           |------|      | Prev |Play/P| Next |      |  TRNS  |
-     * |--------+------+------+------+------+------| ~L3  |           | ~L3  |------+------+------+------+------+--------|
+     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * | TRNS   |      |      |      |      |      |      |           |      |      |      |      |      |      |  TRNS  |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
      *   | TRNS | TRNS | TRNS | TRNS | TRNS |                                       | PREV | VOLU | VOLD | NEXT |      |
@@ -65,9 +65,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(
         // Left Hand
         TRNS, F1,   F2,   F3,   F4,   F5,  F6,
-        TRNS, NO,   NO,   NO,   NO,   NO,   NO,
+        TRNS, NO,   NO,   NO,   NO,   NO,  NO,
         TRNS, NO,   VOLU, MUTE, VOLD, NO,
-        TRNS, NO,   NO,   NO,   NO,   NO,  FN0,
+        TRNS, NO,   NO,   NO,   NO,   NO,  NO,
         TRNS, TRNS, TRNS, TRNS, TRNS,
                                       TRNS, TRNS,
                                             TRNS,
