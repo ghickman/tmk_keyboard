@@ -17,7 +17,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      | Home |       | End  |      |      |
      *                                 |Space |Enter |------|       |------| BkSp | Space|
-     *                                 |      |      |  +L1 |       | F13  |      |      |
+     *                                 |      |      |  +L1 |       | +L1  |      |      |
      *                                 `--------------------'       `--------------------'
      */
     KEYMAP( // Layer 0: Norman
@@ -38,7 +38,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      LGUI, LEFT, UP,   DOWN, RIGHT,
         F8,   F7,
         END,
-        F13,  BSPC, SPC
+        FN0,  BSPC, SPC
     ),
 
     /* Layer 1: Symbols
@@ -59,7 +59,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |      |       |      |      |      |
      *                                 |      |      |------|       |------|      |      |
-     *                                 |      |      |  L0  |       |      |      |      |
+     *                                 |      |      |  L0  |       |  L0  |      |      |
      *                                 `--------------------'       `--------------------'
      */
     KEYMAP(
@@ -80,7 +80,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS,
         TRNS,
-        TRNS, TRNS, TRNS
+        FN0,  TRNS, TRNS
     ),
 
     /* Layer 2: Qwerty
