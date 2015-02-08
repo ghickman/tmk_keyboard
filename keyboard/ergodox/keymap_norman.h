@@ -46,13 +46,13 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,--------------------------------------------------.           ,--------------------------------------------------.
      * | TRNS   |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |           |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |        |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * | TRNS   |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+     * | TRNS   |      |      |      |      | VolU |      |           |      | VolD |      |      |      |      |        |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | TRNS   |      | VolU | Mute | VolD |      |------|           |------|      | Prev |Play/P| Next |      |  TRNS  |
+     * | TRNS   |      |      | Mute | F13  |      |------|           |------|      | Prev |Play/P| Next |      |  TRNS  |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
      * | TRNS   |      |      |      |      |      |      |           |      |      |      |      |      |      |  TRNS  |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   | TRNS | TRNS | TRNS | TRNS | TRNS |                                       | PREV | VOLU | VOLD | NEXT |      |
+     *   | TRNS | TRNS | TRNS | TRNS | TRNS |                                       | TRNS | TRNS | TRNS | TRNS | TRNS |
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        | TRNS | TRNS |       | TRNS | TRNS |
@@ -64,17 +64,17 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     KEYMAP(
         // Left Hand
-        TRNS, F1,   F2,   F3,   F4,   F5,  F6,
-        TRNS, NO,   NO,   NO,   NO,   NO,  NO,
-        TRNS, NO,   VOLU, MUTE, VOLD, NO,
-        TRNS, NO,   NO,   NO,   NO,   NO,  NO,
+        TRNS, F1,   F2,   F3,   F4,   F5,   F6,
+        TRNS, NO,   NO,   NO,   NO,   VOLU, NO,
+        TRNS, NO,   NO,   MUTE, F13,  NO,
+        TRNS, NO,   NO,   NO,   NO,   NO,   NO,
         TRNS, TRNS, TRNS, TRNS, TRNS,
                                       TRNS, TRNS,
                                             TRNS,
                                   NO, NO,   FN0,
         // Right Hand
           F7,  F8,   F9,   F10,  F11,  F12,  NO,
-          NO,  NO,   NO,   NO,   NO,   NO,   NO,
+          NO,  VOLD, NO,   NO,   NO,   NO,   NO,
                NO,   MPRV, MPLY, MNXT, NO,   TRNS,
           FN0, NO,   NO,   NO,   NO,   NO,   TRNS,
                      TRNS, TRNS, TRNS, TRNS, TRNS,
