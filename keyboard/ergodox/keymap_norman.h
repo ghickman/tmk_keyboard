@@ -10,7 +10,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|  =   |           |   -  |------+------+------+------+------+--------|
      * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   P  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
+     *   |  L2  |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        |  F6  |  F5  |       |  F8  |  F7  |
@@ -26,7 +26,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB,  Q,    W,    D,    F,    K,    BSLS,
         LCTL, A,    S,    E,    T,    G,
         LSFT, Z,    X,    C,    V,    B,    EQL,
-        NO,   GRV,  NO,   LALT, LGUI,
+        FN1,  GRV,  NO,   LALT, LGUI,
                                       F6,   F5,
                                             HOME,
                                 SPC,  ENT,  FN0,
@@ -83,51 +83,51 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS, TRNS, TRNS
     ),
 
-    /* Layer 2: Numpad
+    /* Layer 2: Qwerty
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * | Teensy |      |      |      |      |      |      |           |  -L2 |      |Num.Lk|   /  |   *  |   -  |        |
+     * |  Esc   |   1  |   2  |   3  |   4  |   5  |  F1  |           |  F4  |   6  |   7  |   8  |   9  |   0  |   [    |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |      |           |      |      |  N7  |  N8  |  N9  |   +  |        |
+     * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  \   |           |   '  |   Y  |   U  |   I  |   O  |   P  |   ]    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |------|           |------|      |  N4  |  N5  |  N6  |   +  |        |
-     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * |        |      |      |      |      |      |      |           |      |      |  N1  |  N2  |  N3  | Enter|        |
+     * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | RCtrl  |
+     * |--------+------+------+------+------+------|  =   |           |   -  |------+------+------+------+------+--------|
+     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |      |      | Del  |      |                                       |  N0  |  N0  |   .  | Enter|      |
+     *   |  L1  |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
-     *                                        |      |      |       |      |      |
+     *                                        |  F6  |  F5  |       |  F8  |  F7  |
      *                                 ,------|------|------|       |------+------+------.
-     *                                 |      |      |      |       |      |      |      |
-     *                                 | BkSp | Tab  |------|       |------| Enter| Space|
-     *                                 |      |      |      |       |      |      |      |
+     *                                 |      |      | Home |       | End  |      |      |
+     *                                 |Space |Enter |------|       |------| BkSp | Space|
+     *                                 |      |      |  +L1 |       | +L1  |      |      |
      *                                 `--------------------'       `--------------------'
      */
-    KEYMAP( // Layer 2: Numpad
+    KEYMAP( // Layer 2: Qwerty
         // Left Hand
-        FN3, NO,  NO,  NO,  NO,  NO,  NO,
-         NO, NO,  NO,  NO,  NO,  NO,  NO,
-         NO, NO,  NO,  NO,  NO,  NO,
-         NO, NO,  NO,  NO,  NO,  NO,  NO,
-         NO, NO,  NO,  DEL, NO,
-                                      NO, NO,
-                                          NO,
-                               BSPC, TAB, NO,
+        ESC,  1,    2,    3,    4,    5,    F1,
+        TAB,  Q,    W,    E,    R,    T,    BSLS,
+        LCTL, A,    S,    D,    F,    G,
+        LSFT, Z,    X,    C,    V,    B,    EQL,
+        FN1,   GRV,  NO,   LALT, LGUI,
+                                      F6,   F5,
+                                            HOME,
+                                SPC,  ENT,  FN0,
         // Right Hand
-            FN1,  NO,  NLCK, PSLS, PAST, PMNS, NO,
-             NO,  NO,  P7,   P8,   P9,   PPLS, NO,
-                  NO,  P4,   P5,   P6,   PPLS, NO,
-             NO,  NO,  P1,   P2,   P3,   PENT, NO,
-                       P0,   P0,  PDOT,  PENT, NO,
-        NO, NO,
-        NO,
-        NO, ENT, SPC
+          F4,   6,   7,    8,    9,    0,    LBRC,
+          QUOT, Y,   U,    I,    O,    P,    RBRC,
+                H,   J,    K,    L,    SCLN, RCTL,
+          MINS, M,   M,    COMM, DOT,  SLSH, RSFT,
+                     LGUI, LEFT, UP,   DOWN, RIGHT,
+        F8,   F7,
+        END,
+        FN0,  BSPC, SPC
     ),
 };
 
 static const uint16_t PROGMEM fn_actions[] = {
     ACTION_LAYER_MOMENTARY(1),  // Hold for function/media Layer
     /* ACTION_LAYER_INVERT(2, ON_PRESS), // Push to enable/disable Numpad Layer */
-    /* ACTION_LAYER_INVERT(1, ON_PRESS), // Push to enable/disable QWERTY Layer */
+    ACTION_LAYER_INVERT(2, ON_PRESS), // Push to enable/disable QWERTY Layer
 };
