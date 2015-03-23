@@ -1,16 +1,16 @@
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /* Layer 0: Norman
+    /* Layer 0: Qwerty
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
      * |  Esc   |   1  |   2  |   3  |   4  |   5  |  F1  |           |  F4  |   6  |   7  |   8  |   9  |   0  |   [    |
      * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |  Tab   |   Q  |   W  |   D  |   F  |   K  |  \   |           |   '  |   J  |   U  |   R  |   L  |   ;  |   ]    |
+     * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  \   |           |   '  |   Y  |   U  |   I  |   O  |   P  |   ]    |
      * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | LCtrl  |   A  |   S  |   E  |   T  |   G  |------|           |------|   Y  |   N  |   I  |   O  |   H  | RCtrl  |
+     * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | RCtrl  |
      * |--------+------+------+------+------+------|  =   |           |   -  |------+------+------+------+------+--------|
-     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   P  |   M  |   ,  |   .  |   /  | RShift |
+     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
      * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |  L2  |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
+     *   |      |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
      *   `----------------------------------'                                       `----------------------------------'
      *                                        ,-------------.       ,-------------.
      *                                        |  F6  |  F5  |       |  F8  |  F7  |
@@ -20,21 +20,21 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                 |      |      |  +L1 |       | +L1  |      |      |
      *                                 `--------------------'       `--------------------'
      */
-    KEYMAP( // Layer 0: Norman
+    KEYMAP( // Layer 2: Qwerty
         // Left Hand
         ESC,  1,    2,    3,    4,    5,    F1,
-        TAB,  Q,    W,    D,    F,    K,    BSLS,
-        LCTL, A,    S,    E,    T,    G,
+        TAB,  Q,    W,    E,    R,    T,    BSLS,
+        LCTL, A,    S,    D,    F,    G,
         LSFT, Z,    X,    C,    V,    B,    EQL,
-        FN1,  GRV,  NO,   LALT, LGUI,
+        NO,   GRV,  NO,   LALT, LGUI,
                                       F6,   F5,
                                             HOME,
                                 SPC,  ENT,  FN0,
         // Right Hand
           F4,   6,   7,    8,    9,    0,    LBRC,
-          QUOT, J,   U,    R,    L,    SCLN, RBRC,
-                Y,   N,    I,    O,    H,    RCTL,
-          MINS, P,   M,    COMM, DOT,  SLSH, RSFT,
+          QUOT, Y,   U,    I,    O,    P,    RBRC,
+                H,   J,    K,    L,    SCLN, RCTL,
+          MINS, M,   M,    COMM, DOT,  SLSH, RSFT,
                      LGUI, LEFT, UP,   DOWN, RIGHT,
         F8,   F7,
         END,
@@ -81,48 +81,6 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS, TRNS,
         TRNS,
         FN0,  TRNS, TRNS
-    ),
-
-    /* Layer 2: Qwerty
-     *
-     * ,--------------------------------------------------.           ,--------------------------------------------------.
-     * |  Esc   |   1  |   2  |   3  |   4  |   5  |  F1  |           |  F4  |   6  |   7  |   8  |   9  |   0  |   [    |
-     * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-     * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  \   |           |   '  |   Y  |   U  |   I  |   O  |   P  |   ]    |
-     * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-     * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | RCtrl  |
-     * |--------+------+------+------+------+------|  =   |           |   -  |------+------+------+------+------+--------|
-     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
-     * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-     *   |      |   `  |      | LAlt | LGui |                                       | LGui | Left |  Up  | Down | Right|
-     *   `----------------------------------'                                       `----------------------------------'
-     *                                        ,-------------.       ,-------------.
-     *                                        |  F6  |  F5  |       |  F8  |  F7  |
-     *                                 ,------|------|------|       |------+------+------.
-     *                                 |      |      | Home |       | End  |      |      |
-     *                                 |Space |Enter |------|       |------| BkSp | Space|
-     *                                 |      |      |  +L1 |       | +L1  |      |      |
-     *                                 `--------------------'       `--------------------'
-     */
-    KEYMAP( // Layer 2: Qwerty
-        // Left Hand
-        ESC,  1,    2,    3,    4,    5,    F1,
-        TAB,  Q,    W,    E,    R,    T,    BSLS,
-        LCTL, A,    S,    D,    F,    G,
-        LSFT, Z,    X,    C,    V,    B,    EQL,
-        NO,   GRV,  NO,   LALT, LGUI,
-                                      F6,   F5,
-                                            HOME,
-                                SPC,  ENT,  FN0,
-        // Right Hand
-          F4,   6,   7,    8,    9,    0,    LBRC,
-          QUOT, Y,   U,    I,    O,    P,    RBRC,
-                H,   J,    K,    L,    SCLN, RCTL,
-          MINS, M,   M,    COMM, DOT,  SLSH, RSFT,
-                     LGUI, LEFT, UP,   DOWN, RIGHT,
-        F8,   F7,
-        END,
-        FN0,  BSPC, SPC
     ),
 };
 
