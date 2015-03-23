@@ -1,5 +1,5 @@
 /*
-Copyright 2011 Jun Wako <wakojun@gmail.com>
+Copyright 2014 Jun Wako <wakojun@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,19 +15,25 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <avr/io.h>
-#include "stdint.h"
-#include "led.h"
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#if 0
+// duplicated name against mbed USBDeivce
+#define VENDOR_ID       0xFEED
+#define PRODUCT_ID      0x3BED
+#endif
+#define DEVICE_VER      0x0001
+#define MANUFACTURER    tmk.
+#define PRODUCT         Infinitiy
+#define DESCRIPTION     Massdrop Infinity keyboard firmware by tmk
 
 
-/* HHKB has no LEDs */
-void led_set(uint8_t usb_led)
-{
-    if (usb_led & (1<<USB_LED_CAPS_LOCK)) {
-        DDRD |= (1<<6);
-        PORTD |= (1<<6);
-    } else {
-        DDRD |= (1<<6);
-        PORTD &= ~(1<<6);
-    }
-}
+/* matrix size */
+#define MATRIX_ROWS 9   // Strobe
+#define MATRIX_COLS 7   // Sense
+
+/* key combination for command */
+#define IS_COMMAND() (keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT))) 
+
+#endif

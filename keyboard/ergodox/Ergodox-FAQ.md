@@ -65,4 +65,8 @@ TODO description of layouts in base firmware binaries
 - [ ] command to debug all LEDs (on/off/blink)
 - [ ] proper (in-core) implementation of DEBUG_MATRIX_SCAN_RATE (non-Ergodox specific)
 - [ ] proper (in-core) support for per-layer fn_actions[]
+- [ ] create one-handed layouts, see
+        http://half-qwerty.com/
+        https://geekhack.org/index.php?topic=60165.0
+        https://www.massdrop.com/ext/ergodox/?hash=e097c3b9932179055023d47e48b25f1d
 
