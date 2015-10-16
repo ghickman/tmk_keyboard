@@ -41,7 +41,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         FN0,  BSPC, SPC
     ),
 
-    /* Layer 1: Symbols
+    /* Layer 1: Media Keys
      *
      * ,--------------------------------------------------.           ,--------------------------------------------------.
      * | TRNS   |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |           |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |        |
