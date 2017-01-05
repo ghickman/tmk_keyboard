@@ -58,7 +58,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                                        | TRNS | TRNS |       | TRNS | TRNS |
      *                                 ,------|------|------|       |------+------+------.
      *                                 |      |      |      |       |      |      |      |
-     *                                 |      |      |------|       |------|      |      |
+     *                                 |      |      |------|       |------| DEL  |      |
      *                                 |      |      |  L0  |       |  L0  |      |      |
      *                                 `--------------------'       `--------------------'
      */
@@ -80,7 +80,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS,
         TRNS,
-        FN0,  TRNS, TRNS
+        FN0,  DEL, TRNS
     ),
 };
 
